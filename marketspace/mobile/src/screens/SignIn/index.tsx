@@ -3,8 +3,12 @@ import React from "react";
 import LogoSvg from "@assets/logo.svg";
 import Input from "@components/Input";
 import Button from "@components/Button";
+import { useNavigation } from "@react-navigation/native";
+import { AuthNavigatorRoutesProps } from "@routes/auth.routes";
 
 const SignIn: React.FC = () => {
+  const navigation = useNavigation<AuthNavigatorRoutesProps>();
+
   return (
     <ScrollView
       contentContainerStyle={{ flexGrow: 1 }}
@@ -35,6 +39,7 @@ const SignIn: React.FC = () => {
             color="gray.5"
             textColor="gray.2"
             marginTop={2}
+            onPress={() => navigation.navigate("signUp")}
           />
         </Center>
       </Stack>
