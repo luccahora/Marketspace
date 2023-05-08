@@ -2,9 +2,9 @@ import { Image, IImageProps, Badge, Pressable } from "native-base";
 import React from "react";
 import { PencilSimpleLine } from "phosphor-react-native";
 
-type Props = IImageProps & { size: number };
+type Props = IImageProps & { size: number; hasBagde?: boolean };
 
-const UserPhoto = ({ size, ...rest }: Props) => {
+const UserPhoto = ({ size, hasBagde, ...rest }: Props) => {
   return (
     <>
       <Image
@@ -16,20 +16,22 @@ const UserPhoto = ({ size, ...rest }: Props) => {
         {...rest}
       />
 
-      <Badge
-        style={{
-          borderRadius: 50,
-          width: 40,
-          height: 40,
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#647AC7",
-        }}
-        marginTop={-41}
-        marginLeft={65}
-      >
-        <PencilSimpleLine color={"#EDECEE"} size={20} />
-      </Badge>
+      {hasBagde && (
+        <Badge
+          style={{
+            borderRadius: 50,
+            width: 40,
+            height: 40,
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#647AC7",
+          }}
+          marginTop={-41}
+          marginLeft={65}
+        >
+          <PencilSimpleLine color={"#EDECEE"} size={20} />
+        </Badge>
+      )}
     </>
   );
 };

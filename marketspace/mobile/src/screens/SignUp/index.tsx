@@ -60,12 +60,14 @@ const SignUp: React.FC = () => {
                 size={PHOTO_SIZE}
                 source={{ uri: imageUri }}
                 alt={"Foto do usuario"}
+                hasBagde
               />
             ) : (
               <UserPhoto
                 size={PHOTO_SIZE}
                 source={Avatar}
                 alt={"Foto do usuario"}
+                hasBagde
               />
             )}
           </TouchableOpacity>
