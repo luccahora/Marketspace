@@ -4,6 +4,7 @@ import { SafeAreaView, TouchableOpacity } from "react-native";
 import Profile from "@assets/profile.png";
 import Button from "@components/Button";
 import { Plus, Tag, ArrowRight } from "phosphor-react-native";
+import SeachInput from "@components/SeachInput";
 
 export function Home() {
   return (
@@ -65,6 +66,10 @@ export function Home() {
             <ArrowRight size={20} color={"blue"} weight="bold" />
           </HStack>
         </HStack>
+        <Text fontSize={"md"} color={"gray.3"} marginTop={10} marginBottom={3}>
+          Compre produtos variados
+        </Text>
+        <SeachInput />
       </SafeAreaView>
     </ScrollView>
   );
